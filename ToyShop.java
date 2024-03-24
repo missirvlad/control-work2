@@ -49,6 +49,7 @@ public class ToyShop {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
         ToyShop toyShop = new ToyShop();
         toyShop.addNewToy(1, "конструктор", 2);
@@ -56,5 +57,35 @@ public class ToyShop {
         toyShop.addNewToy(3, "кукла", 6);
 
         toyShop.getToys(10);
+    }
+}
+
+class Toy implements Comparable<Toy> {
+
+    private int id;
+    private String name;
+    private int weight;
+
+    public Toy(int id, String name, int weight) {
+        this.id = id;
+        this.name = name;
+        this.weight = weight;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    @Override
+    public int compareTo(Toy o) {
+        return Integer.compare(this.weight, o.weight);
     }
 }
