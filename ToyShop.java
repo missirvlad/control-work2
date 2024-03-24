@@ -49,3 +49,12 @@ public class ToyShop {
             e.printStackTrace();
         }
     }
+    public static void main(String[] args) {
+        ToyShop toyShop = new ToyShop();
+        toyShop.addNewToy(1, "конструктор", 2);
+        toyShop.addNewToy(2, "робот", 2);
+        toyShop.addNewToy(3, "кукла", 6);
+
+        toyShop.getToys(10);
+    }
+}
